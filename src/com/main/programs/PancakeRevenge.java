@@ -21,16 +21,14 @@ public class PancakeRevenge {
 	}
 	
 	public int PancakeRevenge(String line) {
-		int count = 0;
-		StringBuilder sb ;
-
+		int count = 0;		
 		if (line.contains("-")) {
 			while (line.contains("-")) {
 				if(!line.contains("+"))
 				{
 					return count+1;
 				}
-				sb = new StringBuilder();
+				String sb = "";
 				boolean flip = false;
 				String[] s = line.split("");
 				String previous = "";
@@ -38,25 +36,22 @@ public class PancakeRevenge {
 				{
 					if (!flip) {
 						if (i == 0) {
-							sb.append(s[i]);
+							sb = sb + s[i];
 							previous = s[i];
 						} else {
 							if (s[i].equals(previous)) {
-								sb.append(s[i]);
+								sb = sb + s[i];
 								previous = s[i];
-							} else {
-								sb = sb.reverse();
-								String reverse = sb.toString();
-								if(reverse.contains("-"))
+							} else {																
+								if(sb.contains("-"))
 								{
-									reverse = reverse.replace('-', '+');
+									sb = sb.replace('-', '+');
 								}
 								else
 								{
-									reverse = reverse.replace('+', '-');
+									sb = sb.replace('+', '-');
 								}
-								sb = new StringBuilder(reverse);
-								sb.append(s[i]);
+								sb = sb + s[i];
 								flip = true;
 								count = count+1;
 							}
@@ -64,10 +59,10 @@ public class PancakeRevenge {
 					}
 					else
 					{
-						sb.append(s[i]);
+						sb = sb + s[i];
 					}
 				}
-				line = sb.toString();
+				line = sb;
 			}
 		}
 		return count;

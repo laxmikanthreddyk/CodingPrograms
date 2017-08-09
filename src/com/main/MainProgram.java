@@ -22,8 +22,8 @@ public class MainProgram {
 	public static void ProblemB()
 	{
 		PancakeRevenge p = new PancakeRevenge();
-		//System.out.println(p.PancakeRevenge("+--++-+--"));
-		p.PancakeRevengeProgram("/Users/laxmikanth/development/googleprograms/input/B-large-practice.in","/Users/laxmikanth/development/googleprograms/output/B-large-practice.out");
+		System.out.println(p.PancakeRevenge("+--++-+--"));
+		//p.PancakeRevengeProgram("/Users/laxmikanth/development/googleprograms/input/B-large-practice.in","/Users/laxmikanth/development/googleprograms/output/B-large-practice.out");
 	}
 
 	

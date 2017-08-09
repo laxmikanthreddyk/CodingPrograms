@@ -9,7 +9,7 @@ public class MainProgram {
 
 	public static void main(String[] args) {
          
-		ProblemA();
+		//ProblemA();		
 		
 	}
 	public static void ProblemA()
@@ -17,6 +17,7 @@ public class MainProgram {
 		CountingSheep c = new CountingSheep();
 		c.CountSheepProgram("C:\\GoogleProgramsFiles\\Input\\A-large-practice.in","C:\\GoogleProgramsFiles\\Output\\A-large-practice.out");
 	}
+	
 	
 
 }
